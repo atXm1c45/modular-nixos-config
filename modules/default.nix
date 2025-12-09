@@ -12,5 +12,6 @@
 		./programs/xdg.nix
 		./programs/filemanager.nix
 		./programs/social.nix
+		./programs/utils.nix
 	];
 }
