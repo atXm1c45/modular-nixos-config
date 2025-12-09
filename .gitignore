@@ -10,6 +10,9 @@
 .config/nixpkgs
 .config/home-manager
 .config/sops
+.github/ISSUE_TEMPLATE/
+.gitignore
+\\
 
 /.direnv
 /shell.nix
