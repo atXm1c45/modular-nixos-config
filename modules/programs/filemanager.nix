@@ -1,26 +1,37 @@
 { inputs, config, pkgs, ... }:
 
 {
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+  };
+
+  xdg.configFile."yazi" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/yazi/";
+  };
+
   home.packages = with pkgs; [
-    superfile
+    ffmpegthumbnailer
+    jq
+    poppler-utils
+    fd
+    ripgrep
+    fzf
+    zoxide
     
-    nemo-with-extensions
-    
+    unar
     unzip
     p7zip
-    unrar
     
-    file-roller 
+    (xfce.thunar.override {
+      thunarPlugins = with xfce; [
+        thunar-volman
+      ];
+    })
   ];
 
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = [ "nemo.desktop" ];
-  };
-  
-  dconf.settings = {
-    "org/nemo/preferences" = {
-      show-hidden-files = true;
-      show-advanced-permissions = true;
-    };
+    "inode/directory" = [ "thunar.desktop" ];
   };
 }
