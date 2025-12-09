@@ -1,0 +1,16 @@
+/result
+/current-system
+/result-*
+
+*.drv
+.sops-keys
+.sops.yaml
+.ssh
+.gnupg
+.config/nixpkgs
+.config/home-manager
+.config/sops
+
+/.direnv
+/shell.nix
+/default.nix
