@@ -17,5 +17,6 @@
     ./programs/git.nix
     ./programs/nvim.nix
     ./programs/noctalia.nix
+    ./programs/fastfetch.nix
   ];
 }

@@ -18,10 +18,6 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  home.packages = with pkgs; [
-    fastfetch
-  ];
-
   xdg.desktopEntries = {
     thunar-bulk-rename = {
       name = "thunar-bulk-rename";
@@ -39,9 +35,5 @@
       name = "vim";
       noDisplay = true;
     };
-  };
-
-  xdg.configFile."config.jsonc" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/fastfetch/";
   };
 }
