@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }: {
   imports = [
@@ -20,4 +21,27 @@
   home.packages = with pkgs; [
     fastfetch
   ];
+
+  xdg.desktopEntries = {
+    thunar-bulk-rename = {
+      name = "thunar-bulk-rename";
+      noDisplay = true;
+    };
+    thunar-settings = {
+      name = "thunar-settings";
+      noDisplay = true;
+    };
+    gvim = {
+      name = "gvim";
+      noDisplay = true;
+    };
+    vim = {
+      name = "vim";
+      noDisplay = true;
+    };
+  };
+
+  xdg.configFile."config.jsonc" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/fastfetch/";
+  };
 }
