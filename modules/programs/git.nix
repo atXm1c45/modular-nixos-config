@@ -3,7 +3,12 @@
 {
   programs.git = {
     enable = true;
-    userName = "atXm1c45";
-    userEmail = "neilmatthewfprudencio@gmail.com";
+
+    settings = {
+      user = {
+        name = "atXm1c45";
+        email = "neilmatthewfprudencio@gmail.com";
+      };
+    };
   };
 }
