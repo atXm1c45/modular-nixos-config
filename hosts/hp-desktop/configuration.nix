@@ -8,7 +8,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix = {
+              nix = {
 	settings = {
 		experimental-features = [ "nix-command" "flakes" ];
 		
@@ -100,6 +100,8 @@
   services.udisks2.enable = true;
 
   programs.dconf.enable = true;
+
+  nixpkgs.hostPlatform = "x86_64-linux";
 
   system.stateVersion = "25.11"; 
 }
