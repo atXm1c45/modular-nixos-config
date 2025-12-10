@@ -1,28 +1,27 @@
 return {
   'shaunsingh/nord.nvim',
-  lazy = false,
-  priority = 1000,
+  lazy = false,    -- Load immediately
+  priority = 1000, -- Load first to set the background
   config = function()
-    -- Example config in lua
-    vim.g.nord_contrast = true
-    vim.g.nord_borders = false
-    vim.g.nord_disable_background = true
-    vim.g.nord_italic = false
-    vim.g.nord_uniform_diff_background = true
-    vim.g.nord_bold = false
+    local theme_path = vim.fn.stdpath("config") .. "/lua/current_theme.lua"
+    local f = io.open(theme_path, "r")
 
-    -- Load the colorscheme
-    require('nord').set()
+    if f then
+      f:close()
+      local colors = dofile(theme_path)
 
-    -- Toggle background transparency
-    local bg_transparent = true
-
-    local toggle_transparency = function()
-      bg_transparent = not bg_transparent
-      vim.g.nord_disable_background = bg_transparent
-      vim.cmd [[colorscheme nord]]
+      vim.api.nvim_set_hl(0, "Normal", { fg = colors.foreground, bg = colors.background })
+      vim.api.nvim_set_hl(0, "Cursor", { fg = colors.background, bg = colors.cursor })
+      vim.api.nvim_set_hl(0, "Comment", { fg = colors.comment, italic = true })
+      vim.api.nvim_set_hl(0, "String", { fg = colors.string })
+      vim.api.nvim_set_hl(0, "Function", { fg = colors.function_ })
+      vim.api.nvim_set_hl(0, "Keyword", { fg = colors.keyword, bold = true })
+      vim.api.nvim_set_hl(0, "Constant", { fg = colors.constant })
+      vim.api.nvim_set_hl(0, "Error", { fg = colors.error })
+    else
+      vim.g.nord_contrast = true
+      vim.g.nord_borders = false
+      require('nord').set()
     end
-
-    vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
   end,
 }
