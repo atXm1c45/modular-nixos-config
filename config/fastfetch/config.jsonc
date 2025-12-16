@@ -1,27 +1,80 @@
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/nixos-dotfiles/config/fastfetch/nixos-logo.png",
+    "type": "kitty", // Use "kitty" since you are on the Kitty terminal
+    "height": 12, // Adjust height (Nitch logos are usually small)
+    "width": 24, // Adjust width to preserve aspect ratio
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 4 // Add space between image and text
+    }
+  },
+  "display": {
+    "separator": "  ", // Nitch uses a clean space, not ": "
+    "color": {
+      "keys": "magenta" // Nitch often uses a distinct accent color for icons
+    }
+  },
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
     "break",
-    "colors"
+    "break",
+    "break",
+    // Header
+    {
+      "type": "title",
+      "format": "{user-name-colored}@{host-name-colored}",
+      "keyColor": "blue"
+    },
+    "break",
+    // Info - Nitch style uses Icons as keys instead of words ("OS", "Kernel")
+    {
+      "type": "os",
+      "key": " ", // NixOS Icon
+      "keyColor": "blue"
+    },
+    {
+      "type": "kernel",
+      "key": " ", // Gear Icon
+      "keyColor": "white"
+    },
+    {
+      "type": "packages",
+      "key": " ", // Package Icon
+      "keyColor": "green"
+    },
+    {
+      "type": "shell",
+      "key": " ", // Terminal Icon
+      "keyColor": "yellow"
+    },
+    {
+      "type": "wm",
+      "key": " ", // Window Manager Icon
+      "keyColor": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": " ", // Clock Icon
+      "keyColor": "red"
+    },
+    {
+      "type": "memory",
+      "key": " ", // RAM Icon
+      "keyColor": "magenta"
+    },
+    // Nitch often has a tiny color dot strip at the bottom
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "block": {
+        "range": [
+          1,
+          6
+        ] // Show colors 1-6
+      }
+    }
   ]
 }
