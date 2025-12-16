@@ -12,4 +12,4 @@ COUNT=$(find "$DIR" -maxdepth 1 -name "Screenshot-*" | wc -l)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 FILENAME="$DIR/Screenshot-${COUNT}_${TIMESTAMP}.png"
 
-grim -t ppm - | satty --filename - --fullscreen --output-filename "$FILENAME"
+grim -t ppm - | satty --filename - --fullscreen --output-filename "$FILENAME" 9>&-
