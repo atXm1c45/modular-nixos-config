@@ -10,5 +10,6 @@
 		./programs/clipboard.nix
 		./programs/screenshots.nix
 		./programs/xdg.nix
+		./programs/filemanager.nix
 	];
 }

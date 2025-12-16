@@ -1,4 +1,4 @@
-{ input, config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 let
   screenshotScript = pkgs.writeShellScriptBin "screenshot" ''
