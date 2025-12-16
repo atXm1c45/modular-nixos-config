@@ -94,7 +94,7 @@
   users.users = {
     atxm = {
       isNormalUser = true;
-      extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+      extraGroups = ["wheel" "i2c"]; # Enable ‘sudo’ for the user.
       shell = pkgs.zsh;
       packages = with pkgs; [
         tree
@@ -131,8 +131,10 @@
   # Desktop configuration systems
   programs.dconf.enable = true;
 
-  # Gaming/Performance
-  programs.mango.enable = true; # Mangohud (optional)
+  # MangoWC
+  programs.mango.enable = true;
+
+  hardware.i2c.enable = true;
 
   # =================================================================
   # 7. ENVIRONMENT PACKAGES & FONTS
@@ -143,7 +145,7 @@
     wget
     curl
     git
-    brightnessctl
+    ddcutil
   ];
 
   fonts.packages = with pkgs; [
