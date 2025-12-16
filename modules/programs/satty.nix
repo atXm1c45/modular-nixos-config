@@ -7,6 +7,8 @@
   home.packages = with pkgs; [
     wl-clipboard
     satty
+    grim
+    slurp
   ];
 
   xdg.configFile."satty" = {

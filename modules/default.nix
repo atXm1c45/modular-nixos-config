@@ -9,7 +9,7 @@
     ./programs/kitty.nix
     ./programs/flatpak.nix
     ./programs/clipboard.nix
-    ./programs/screenshots.nix
+    ./programs/satty.nix
     ./programs/xdg.nix
     ./programs/filemanager.nix
     ./programs/social.nix
