@@ -99,6 +99,8 @@
   services.gvfs.enable = true; 
   services.udisks2.enable = true;
 
+  programs.dconf.enable = true;
+
   system.stateVersion = "25.11"; 
 }
 
