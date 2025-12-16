@@ -1,20 +1,23 @@
-{ inputs, config, pkgs, ...  }:
-
 {
-	imports = [ inputs.mango.hmModules.mango ];
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [inputs.mango.hmModules.mango];
 
-	home.packages = with pkgs; [
-		swww
-	];
+  home.packages = with pkgs; [
+    swww
+  ];
 
-	wayland.windowManager.mango = {
-		enable = true;
+  wayland.windowManager.mango = {
+    enable = true;
 
-		# autostart_sh (add this in the future)	
-	};
+    # autostart_sh (add this in the future)
+  };
 
-	xdg.configFile."mango" = {
-		source = config.lib.file.mkOutOfStoreSymlink "/home/atxm/nixos-dotfiles/config/mango";
-		recursive = false;
-	};
+  xdg.configFile."mango" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/atxm/nixos-dotfiles/config/mango";
+    recursive = false;
+  };
 }
