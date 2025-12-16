@@ -14,5 +14,6 @@
 		./programs/social.nix
 		./programs/utils.nix
 		./programs/git.nix
+		./programs/nvim.nix
 	];
 }
