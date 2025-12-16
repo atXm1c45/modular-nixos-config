@@ -20,4 +20,10 @@
 			plugins = [ "git" "sudo" ];
 		};
 	};
+
+home.sessionPath = [
+    "${pkgs.stylua}/bin"
+    "${pkgs.ruff}/bin"
+    # Add any other formatter that was giving Exit 127 here
+  ];
 }

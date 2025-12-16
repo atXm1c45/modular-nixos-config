@@ -30,6 +30,22 @@
     ghostscript
     fzf
     cmake
+    
+    # LANGUAGE SERVERS (LSPs)
+    nodePackages.vscode-langservers-extracted 
+
+    nodePackages.typescript-language-server
+    nodePackages.yaml-language-server
+    nodePackages.dockerfile-language-server-nodejs
+    nodePackages."@tailwindcss/language-server"
+    nil
+    lua-language-server
+    python3.pkgs.python-lsp-server
+    terraform-ls
+
+    # FORMATTERS
+    stylua
+    alejandra
   ];
 
   home.sessionVariables = {
