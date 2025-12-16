@@ -8,11 +8,6 @@ alias nrb="nh os boot ~/nixos-dotfiles"
 alias ncg="nh clean all --keep 3"
 alias nfu="nix flake update ~/nixos-dotfiles && nrs"
 
-# Directory Shortcuts
-alias dir-config="cd ~/nixos-dotfiles/config/"
-alias dir-modules="cd ~/nixos-dotfiles/modules/programs/"
-alias dir-system="cd ~/nixos-dotfiles/hosts/hp-desktop/"
-
 # Alias functions
 alias nnm='nixos_new_module'
 alias gacp='git_add_commit_push'
@@ -65,7 +60,7 @@ nixos_new_module() {
 
   # 2. Use 'home.packages' for simple binaries (e.g., home.packages = [ pkgs.my-tool ])
   # home.packages = with pkgs; [
-  #   pkgs.${NAME}
+  #   ${NAME}
   # ];
 
   # 3. Use 'xdg.configFile' for config files that live in ~/.config/${NAME}
