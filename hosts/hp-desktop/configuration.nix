@@ -136,6 +136,8 @@
 
   hardware.i2c.enable = true;
 
+  services.flatpak.enable = true;
+
   # =================================================================
   # 7. ENVIRONMENT PACKAGES & FONTS
   # =================================================================
@@ -152,5 +154,5 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  # hardware.graphics.enable = true; # Typically only needed if you are NOT using a desktop environment
+  hardware.graphics.enable = true;
 }

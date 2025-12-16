@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+      inputs.nixpkgs.follows = "nixpkgs"; # <--- Add this
+    };
+
     zen = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {

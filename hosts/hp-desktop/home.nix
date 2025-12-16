@@ -19,14 +19,6 @@
   programs.git.enable = true;
 
   xdg.desktopEntries = {
-    thunar-bulk-rename = {
-      name = "thunar-bulk-rename";
-      noDisplay = true;
-    };
-    thunar-settings = {
-      name = "thunar-settings";
-      noDisplay = true;
-    };
     gvim = {
       name = "gvim";
       noDisplay = true;

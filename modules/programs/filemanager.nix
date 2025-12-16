@@ -19,19 +19,9 @@
     ripgrep
     fzf
     zoxide
-    
-    unar
-    unzip
-    p7zip
-    
-    (xfce.thunar.override {
-      thunarPlugins = with xfce; [
-        thunar-volman
-      ];
-    })
   ];
 
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = [ "thunar.desktop" ];
+    "inode/directory" = [ "yazi.desktop" ];
   };
 }

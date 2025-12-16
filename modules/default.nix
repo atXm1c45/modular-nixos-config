@@ -7,7 +7,7 @@
     ./programs/mango.nix
     ./programs/zsh.nix
     ./programs/kitty.nix
-    ./programs/zen.nix
+    ./programs/flatpak.nix
     ./programs/clipboard.nix
     ./programs/screenshots.nix
     ./programs/xdg.nix
