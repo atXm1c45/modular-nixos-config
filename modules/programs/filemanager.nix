@@ -23,6 +23,9 @@
     fzf
     zoxide
     dragon-drop
+    neovim
+    mpv
+    imv
   ];
 
   services.udiskie = {

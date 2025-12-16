@@ -25,6 +25,11 @@
 
       eval "$(oh-my-posh init zsh --config ${config.xdg.configHome}/oh-my-posh/theme.json)"
     '';
+
+    envExtra = ''
+      export EDITOR="nvim"
+      export VISUAL="nvim"
+    '';
   };
 
   xdg.configFile."oh-my-posh/theme.json".source =

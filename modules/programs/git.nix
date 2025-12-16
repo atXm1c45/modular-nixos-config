@@ -10,7 +10,7 @@
     settings = {
       user = {
         name = "atXm1c45";
-        email = "user@noreply.github.com";
+        email = "92849575+atXm1c45@users.noreply.github.com";
       };
     };
   };
