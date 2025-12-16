@@ -1,0 +1,3 @@
+shell_integration no-rc
+confirm_os_window_close 0
+

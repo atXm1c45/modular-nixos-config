@@ -143,6 +143,7 @@
     wget
     curl
     git
+    brightnessctl
   ];
 
   fonts.packages = with pkgs; [

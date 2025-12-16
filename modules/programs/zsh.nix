@@ -1,27 +1,34 @@
-{ inputs, config, pkgs, ...  }:
-
 {
-	programs.zsh = {
-		enable = true;
-		enableCompletion = true;
-		autosuggestion.enable = true;
-		
-		syntaxHighlighting = {
-			enable = true;
-			highlighters = [
-				"main" "brackets" "pattern" "cursor" "root"
-			];
-		};
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
 
-		initContent = "source ${config.home.homeDirectory}/nixos-dotfiles/config/zsh/aliases.zsh";
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "cursor"
+        "root"
+      ];
+    };
 
-		oh-my-zsh = {
-			enable = true;
-			plugins = [ "git" "sudo" ];
-		};
-	};
+    initContent = "source ${config.home.homeDirectory}/nixos-dotfiles/config/zsh/aliases.zsh";
 
-home.sessionPath = [
+    oh-my-zsh = {
+      enable = true;
+      plugins = ["git" "sudo"];
+    };
+  };
+
+  home.sessionPath = [
     "${pkgs.stylua}/bin"
     "${pkgs.ruff}/bin"
     # Add any other formatter that was giving Exit 127 here
