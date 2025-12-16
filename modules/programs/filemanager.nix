@@ -1,6 +1,9 @@
-{ inputs, config, pkgs, ... }:
-
 {
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
@@ -8,7 +11,7 @@
   };
 
   xdg.configFile."yazi" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/yazi/";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/yazi";
   };
 
   home.packages = with pkgs; [
@@ -19,9 +22,17 @@
     ripgrep
     fzf
     zoxide
+    dragon-drop
   ];
 
+  services.udiskie = {
+    enable = true;
+    tray = "auto";
+    automount = true;
+    notify = true;
+  };
+
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = [ "yazi.desktop" ];
+    "inode/directory" = ["yazi.desktop"];
   };
 }
