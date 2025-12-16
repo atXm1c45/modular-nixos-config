@@ -1,13 +1,12 @@
 { inputs, config, pkgs, ... }:
 
 {
-home.packages = with pkgs; [
-   neovim
+  home.packages = with pkgs; [
+    neovim
     git
     curl
     wget
     gzip
-    tar
     unzip
     ripgrep
     fd
@@ -28,7 +27,9 @@ home.packages = with pkgs; [
     terraform
     shfmt
     imagemagick
-    ghostscript 
+    ghostscript
+    fzf
+    cmake
   ];
 
   home.sessionVariables = {
