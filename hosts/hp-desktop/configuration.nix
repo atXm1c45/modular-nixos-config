@@ -87,7 +87,7 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  hardware.graphics.enable = true;
+  # hardware.graphics.enable = true;
 
   services.displayManager.sddm = {
 	enable = true;
