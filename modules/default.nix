@@ -8,5 +8,7 @@
 		./programs/rofi.nix
 		./programs/zen.nix
 		./programs/clipboard.nix
+		./programs/screenshots.nix
+		./programs/xdg.nix
 	];
 }
