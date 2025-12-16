@@ -13,5 +13,6 @@
 		./programs/filemanager.nix
 		./programs/social.nix
 		./programs/utils.nix
+		./programs/git.nix
 	];
 }

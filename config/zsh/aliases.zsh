@@ -4,9 +4,9 @@ alias btw="echo I use NixOS btw"
 alias ff="fastfetch"
 
 # NixOS management
-alias nrs="sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-btw"
-alias nrb="sudo nixos-rebuild boot --flake ~/nixos-dotfiles#nixos-btw"
-alias ncg="sudo nix-collect-garbage -d"
+alias nrs="nh os switch ~/nixos-dotfiles/flake.nix"
+alias nrb="nh os boot ~/nixos-dotfiles/flake.nix"
+alias ncg="nh clean all --keep 3"
 alias nfu="sudo nix flake update --flake ~/nixos-dotfiles && nrs"
 
 alias nnm='nixos_new_module'
