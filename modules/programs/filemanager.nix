@@ -23,7 +23,7 @@
     fzf
     zoxide
     dragon-drop
-    timg
+    imv
     mpv
   ];
 
