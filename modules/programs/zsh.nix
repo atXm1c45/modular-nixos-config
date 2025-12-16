@@ -20,7 +20,7 @@
       ];
     };
 
-    initExtra = ''
+    initContent = ''
       source "${config.home.homeDirectory}/nixos-dotfiles/config/zsh/aliases.zsh"
 
       eval "$(oh-my-posh init zsh --config ${config.xdg.configHome}/oh-my-posh/theme.json)"

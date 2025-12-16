@@ -1,6 +1,9 @@
-{ inputs, config, pkgs, ... }:
-
 {
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     neovim
     git
@@ -30,9 +33,9 @@
     ghostscript
     fzf
     cmake
-    
+
     # LANGUAGE SERVERS (LSPs)
-    nodePackages.vscode-langservers-extracted 
+    nodePackages.vscode-langservers-extracted
 
     nodePackages.typescript-language-server
     nodePackages.yaml-language-server
@@ -52,7 +55,7 @@
     EDITOR = "nvim";
   };
 
-	xdg.configFile."nvim" = {
-		source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/nvim/";
-	};
+  xdg.configFile."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-dotfiles/config/nvim/";
+  };
 }
