@@ -24,6 +24,7 @@
     zoxide
     dragon-drop
     timg
+    mpv
   ];
 
   services.udiskie = {
