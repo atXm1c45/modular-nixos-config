@@ -2,18 +2,33 @@
 
 {
 home.packages = with pkgs; [
-    neovim
-    
-    ripgrep
-    fd
-    gcc
-    wl-clipboard
-    unzip
-    wget
+   neovim
+    git
     curl
+    wget
     gzip
     tar
-    git
+    unzip
+    ripgrep
+    fd
+    wl-clipboard
+    gcc
+    lazygit
+    trash-cli
+    nodejs_22
+    python3
+    go
+    cargo
+    ruby
+    php
+    jdk
+    luajitPackages.luarocks
+    nodePackages.prettier
+    ruff
+    terraform
+    shfmt
+    imagemagick
+    ghostscript 
   ];
 
   home.sessionVariables = {
