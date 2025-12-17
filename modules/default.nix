@@ -20,5 +20,6 @@
     ./programs/fastfetch.nix
     ./programs/wf-recorder.nix
     ./programs/cli.nix
+    ./programs/theme.nix
   ];
 }
